@@ -1,0 +1,2 @@
+# 20260629_Julia_Bering_9223257_IPWA01-01
+Fallstudie Informatik Studium Kleiderspende
