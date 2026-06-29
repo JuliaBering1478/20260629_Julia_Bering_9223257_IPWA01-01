@@ -1,0 +1,337 @@
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kleiderspende Hamburg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <script src="FormSubmission.js"></script>
+    <style>
+      #content1, #content2 {
+          display: none;
+      }
+     </style>
+  </head>
+  <body>
+
+ 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kleiderspende Hamburg</a>
+        <img src="img/logo.png" alt="Logo" width="5%" height="5%" class="d-inline-block align-text-top"
+        Bootstrap />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Über uns</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Kontakt
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Adresse</a></li>
+                <li><a class="dropdown-item" href="#">Telefonnummer</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Öffnungszeiten</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Social Media</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="mainhead"
+      style="background-image: url('./img/background1.jpg');" class="img-fluid">
+      <div class="color-overlay d-flex justify-content-center align-items-center";>
+       <h1>Spende Kleidung im Herzen von Hamburg</h1>
+    </div>
+    <br>
+    <h5> Wir sind ein kleines ehrenamtliches Unternehmen, welches Menschen aus der ganzen Welt in der Not helfen möchte. Wenn auch du ein teil davon werden willst, such dir dein favorisiertes Kriesengebiet aus und spende deine nicht mehr benötigten Kleidung. Komme dazu einfach bei uns vorbei (siehe unten Anfahrt) oder lass deine Kleidung ganz bequem von zuhause abholen wenn die Reichweite in der Nähe ist und füllt das unten stehende Formular aus.</h5>
+    <br>   
+    <h2 class="formular"> Kleiderspendeformular</h2>
+
+        <div class="mb-3">
+          <label for="spendenart">Spendenart:</label>
+          <select id="spendenart" onchange="toggleContent()">
+              <option value="">Bitte auswählen</option>
+              <option value="option1">Abolung</option>
+              <option value="option2">Abgabe Geschäftsstelle</option>
+          </select>
+        </div>
+
+ <form name="myForm"> 
+      <div id="content1">
+          <div class="row g-3">
+            <div class="col-md-5">
+              <label for="Vorname" >Vorname:</label><br>
+              <input type="text" class="form-control" id="Vorname" required  />
+           </div>
+        
+            <div class="col-md-5">
+             <label for="Nachname" >Nachname:</label><br>
+             <input type="text" class="form-control" id="Nachname" required />
+            </div>
+
+            <div class="col-md-5">
+              <label for="Adresse" >Adresse:</label><br>
+              <input type="text" class="form-control" id="Adresse" required  />
+            </div>
+
+            <div class="col-md-2">
+             <label for="PLZ" >PLZ:</label><br>
+             <input type="text" class="form-control" id="PLZ" pattern="[2]{2}[0-9]{3}" />
+            </div>
+
+           <div class="col-md-3">
+             <label for="Ort" >Ort:</label><br>
+             <input type="text" class="form-control" id="Ort" required />
+            </div>
+
+           <div class="col-md-4">
+             <label for="E-Mail">E-Mail:</label><br>
+             <input type="email" class="form-control" id="E-Mail" required placeholder="manu.musterperson@gmail.com" />
+            </div>
+
+            <div class="col-md-3">
+              <label for="Telefonnummer">Telefonnummer:</label><br>
+              <input type="tel" class="form-control" id="Telefonnummer" />
+            </div>
+
+            <div class="col-md-1">
+              <label for="Abholzeit">Abholzeit:</label><br>
+              <input type="time" class="form-control" id="Abholzeit"  />
+            </div>
+
+            <div class="col-md-2">
+              <label for="Abholdatum">Abholdatum:</label><br>
+              <input type="date" class="form-control" id="Abholdatum" />
+            </div>
+
+           <div class="col-md-5">
+              <label for="AnzahlKleidungsstücke">Anzahl Kleidungsstücke:</label><br>
+              <input type="text" class="form-control" id="AnzahlKleidungsstücke"  />
+            </div>
+
+            <div class="col-md-5">
+              <label for="ArtKleidungsstücke">Art der Kleidungsstücke:</label><br>
+              <select class="form-select" aria-label="Default select example" name="ArtKleidungsstücke" id="ArtKleidungsstücke">
+                  <option value="">Bitte auswählen</option>
+                  <option value="Röcke">Röcke</option>
+                  <option value="Kleider">Kleider</option>
+                  <option value="Hosen">Hosen</option>
+                  <option value="Schuhe">Schuhe</option>
+                  <option value="T-shirts">T-shirts</option>
+                  <option value="Pullover">Pullover</option>
+                  <option value="Jacken">Jacken</option>
+                </select>
+            </div>
+    
+           <div class="col-md-10">
+              <label for="Kriesengebiete">Wähle ein Kriesengebiet aus:</label>
+                <select class="form-select" aria-label="Default select example" name="Kriesengebiete" id="Kriesengebiete">
+                  <option value="">Bitte auswählen</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Ägypten">Ägypten</option>
+                  <option value="Algerien">Algerien</option>
+                  <option value="Armenien">Armenien</option>
+                  <option value="Aserbaidschan">Aserbaidschan</option>
+                  <option value="Äthiopien">Äthiopien</option>
+                  <option value="Belarus">Belarus</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Côte d`Ivoire">Côte d`Ivoire</option>
+                  <option value="Demokratische Republik Kongo">Demokratische Republik Kongo</option>
+                  <option value="Eritrea">Eritrea</option>
+                  <option value="Haiti">Haiti</option>
+                  <option value="Irak">Irak</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Isreal">Israel</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Jemen">Jemen</option>
+                  <option value="Kamerun">Kamerun</option>
+                  <option value="Libanon">Libanon</option>
+                  <option value="Libyen">Libyen</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Mauretanien">Mauretanien</option>
+                  <option value="Mosambik">Mosambik</option>
+                  <option value="Myanmar">Myanmar</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Palästinensische Gebiete">Palästinensische Gebiete</option>
+                  <option value="Philippinen">Philippinen</option>
+                  <option value="Russische Föderation">Russische Föderation</option>
+                  <option value="Somalia">Somalia</option>
+                  <option value="Sudan">Sudan</option>
+                  <option value="Südsudan">Südsudan</option>
+                  <option value="Syrien">Syrien</option>
+                  <option value="Tschad">Tschad</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="Venezuela">Venezuela</option>
+                  <option value="Zentralafrikanische Rebublik">Zentralafrikanische Republik</option>
+               </select>
+              </div>
+      </div> 
+
+      <br>
+
+    <div class="mb-3">
+      <label for="nachricht">"Bemerkung"</label><br>
+      <textarea name="nachricht" id="nachricht"></textarea>
+    </div>
+
+    <div>
+  <button type="submit">
+    <div onclick="openInNewTab('http://127.0.0.1:5500/ergebnisindex.html')";>submit</div>
+    </button>
+</div>
+  </div>
+  </form>
+
+  <form name="myForm2">
+    <div id="content2">
+        <div class="row g-3">
+          <div class="col-md-5">
+            <label for="Vorname2" >Vorname:</label><br>
+            <input type="text" class="form-control" id="Vorname2" required  />
+          </div>
+        
+          <div class="col-md-5">
+            <label for="Nachname2" >Nachname:</label><br>
+            <input type="text" class="form-control" id="Nachname2" required />
+          </div>
+
+          <div class="col-md-5">
+            <label for="AnzahlKleidungsstücke2">Anzahl Kleidungsstücke:</label><br>
+            <input type="text" class="form-control" id="AnzahlKleidungsstücke2"  />
+         </div>
+    
+          <div class="col-md-5">
+            <label for="ArtKleidungsstücke2">Art der Kleidungsstücke:</label><br>
+            <select class="form-select" aria-label="Default select example" name="ArtKleidungsstücke2" id="ArtKleidungsstücke2">
+              <option value="">Bitte auswählen</option>
+              <option value="Röcke">Röcke</option>
+              <option value="Kleider">Kleider</option>
+              <option value="Hosen">Hosen</option>
+              <option value="Schuhe">Schuhe</option>
+              <option value="T-shirts">T-shirts</option>
+              <option value="Pullover">Pullover</option>
+              <option value="Jacken">Jacken</option>
+            </select>
+          </div>
+
+          <div class="col-md-10">
+            <label for="Kriesengebiete2">Wähle ein Kriesengebiet aus:</label>
+              <select class="form-select" aria-label="Default select example" name="Kriesengebiete" id="Kriesengebiete2">
+              <option value="">Bitte auswählen</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Ägypten">Ägypten</option>
+              <option value="Algerien">Algerien</option>
+              <option value="Armenien">Armenien</option>
+              <option value="Aserbaidschan">Aserbaidschan</option>
+              <option value="Äthiopien">Äthiopien</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Côte d`Ivoire">Côte d`Ivoire</option>
+              <option value="Demokratische Republik Kongo">Demokratische Republik Kongo</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Irak">Irak</option>
+              <option value="Iran">Iran</option>
+              <option value="Isreal">Israel</option>
+              <option value="Japan">Japan</option>
+              <option value="Jemen">Jemen</option>
+              <option value="Kamerun">Kamerun</option>
+              <option value="Libanon">Libanon</option>
+              <option value="Libyen">Libyen</option>
+              <option value="Mali">Mali</option>
+              <option value="Mauretanien">Mauretanien</option>
+              <option value="Mosambik">Mosambik</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niger">Niger</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palästinensische Gebiete">Palästinensische Gebiete</option>
+              <option value="Philippinen">Philippinen</option>
+              <option value="Russische Föderation">Russische Föderation</option>
+              <option value="Somalia">Somalia</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Südsudan">Südsudan</option>
+              <option value="Syrien">Syrien</option>
+              <option value="Tschad">Tschad</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Zentralafrikanische Rebublik">Zentralafrikanische Republik</option>
+            </select>
+        </div>
+    </div>
+
+    <br>
+
+  <div class="mb-3">
+    <label for="nachricht">"Bemerkung"</label><br>
+    <textarea name="nachricht" id="nachricht"></textarea>
+  </div>
+  <div>
+      <button type="submit">
+    <div onclick="openInNewTab('http://127.0.0.1:5500/ergebnisindex.html')";>submit</div>
+    </button>
+</div>
+</div>
+</form>
+
+        <br>
+
+        <h2> Anfahrt</h2>
+          <p> Wir befinden uns in Hamburg Dulsberg. Dies liegt zwischen Wandsbek und Barmbek und kann mit der U1 oder U3 sowie mehreren Buslinien einfach und schnell von überall erreicht werden. Gerne holen wir deine Kleidung auch ab, wenn du dich innerhalb unseres Radius befindest
+          </p>
+            <br>
+          <p> Alter Teichweg 100,
+              22049 Hamburg
+          </p> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18951.146254911102!2d10.03574642099609!3d53.57752118285876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1724253144494!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+<footer>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Datenschutz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Impressum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs</a>
+            </li>
+      </div>
+    </div>
+  </nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
